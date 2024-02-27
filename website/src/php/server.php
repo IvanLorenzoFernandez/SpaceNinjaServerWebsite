@@ -93,7 +93,7 @@
         echo ("Changes have been saved!");
     }
     if ($_POST['idFile']=="inventory.json") {
-        $inventory = file_get_contents('../../../static/fixed_responses/inventory.json');
+        $inventory = file_get_contents('../../../static/fixed_responses/new_inventory.json');
         $inventoryData = json_decode($inventory, true);
         foreach ($inventoryData as $key => $val) {
             if ($key=='DailyAffiliation'){
@@ -137,7 +137,7 @@
             }
         }
         $updatedInventoryData = json_encode($inventoryData, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
-        file_put_contents('../../../static/fixed_responses/inventory.json', $updatedInventoryData);
+        file_put_contents('../../../static/fixed_responses/new_inventory.json', $updatedInventoryData);
         echo ("Changes have been saved!");
     }
 ?>

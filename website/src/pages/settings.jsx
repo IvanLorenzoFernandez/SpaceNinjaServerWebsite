@@ -1,5 +1,5 @@
 import settingsData from '../../../config.json';
-import inventorySettingsData from '../../../static/fixed_responses/inventory.json';
+import inventorySettingsData from '../../../static/fixed_responses/new_inventory.json';
 import postTutorialInventorySettingsData from '../../../static/fixed_responses/postTutorialInventory.json';
 import { useState } from "react";
 import $ from "jquery";
@@ -128,7 +128,7 @@ function Inventory() {
             <>
                 <h1>INVENTORY</h1>
                 <form action="http://localhost:8000/server.php" method="post" onSubmit={(event) => handleSubmit(event)} className="settings-form">
-                    <input type="hidden" name="idFile" id="idFile" value="inventory.json" />
+                    <input type="hidden" name="idFile" id="idFile" value="new_inventory.json" />
                     <table>
                         <tbody>
                             <tr>
@@ -136,7 +136,7 @@ function Inventory() {
                                     Maximum Reputation Per Reset:
                                 </td>
                                 <td>
-                                    <input type='number' name='reputationCaps' id="reputationCaps" defaultValue={postTutorialInventorySettingsData.DailyAffiliation}></input>
+                                    <input type='number' name='reputationCaps' id="reputationCaps" defaultValue={inventorySettingsData.DailyAffiliation}></input>
                                 </td>
                             </tr>
                             <tr>
@@ -144,7 +144,7 @@ function Inventory() {
                                     Maximum Focus Per Reset:
                                 </td>
                                 <td>
-                                <input type='number' name='focusCaps' id='focusCaps' defaultValue={postTutorialInventorySettingsData.DailyFocus}></input>
+                                <input type='number' name='focusCaps' id='focusCaps' defaultValue={inventorySettingsData.DailyFocus}></input>
                                 </td>
                             </tr>
                         </tbody>
