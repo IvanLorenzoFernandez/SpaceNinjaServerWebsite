@@ -60,13 +60,13 @@ function Config() {
                 <input type="hidden" name="idFile" id="idFile" value="config.json" />
                 <table>
                     <tbody>
-                        <Option optionName={"skipStoryModeChoice"} check={settingsData.skipStoryModeChoice} text={"Skip the choice between Awakening and Duviri?"} />
-                        <Option optionName={"skipTutorial"} check={settingsData.skipTutorial} text={"Skip the tutorial?"} />
-                        <Option optionName={"unlockAllMissions"} check={settingsData.unlockAllMissions} text={"Unlock all Star Chart nodes?"} />
-                        <Option optionName={"unlockAllQuests"} check={settingsData.unlockAllQuests} text={"Unlock all Quests?"} />
-                        <Option optionName={"infiniteResources"} check={settingsData.infiniteResources} text={"Do you want infinite credits and platinum?"} />
-                        <Option optionName={"unlockallShipFeatures"} check={settingsData.unlockallShipFeatures} text={"Do you want to unlock all Ship Segments?"} />
-                        <Option optionName={"unlockAllShipDecorations"} check={settingsData.unlockAllShipDecorations} text={"Do you want to unlock all Ship Decorations?"} />
+                        <OptionRadio optionName={"skipStoryModeChoice"} check={settingsData.skipStoryModeChoice} text={"Skip the choice between Awakening and Duviri?"} />
+                        <OptionRadio optionName={"skipTutorial"} check={settingsData.skipTutorial} text={"Skip the tutorial?"} />
+                        <OptionRadio optionName={"unlockAllMissions"} check={settingsData.unlockAllMissions} text={"Unlock all Star Chart nodes?"} />
+                        <OptionRadio optionName={"unlockAllQuests"} check={settingsData.unlockAllQuests} text={"Unlock all Quests?"} />
+                        <OptionRadio optionName={"infiniteResources"} check={settingsData.infiniteResources} text={"Do you want infinite credits and platinum?"} />
+                        <OptionRadio optionName={"unlockallShipFeatures"} check={settingsData.unlockallShipFeatures} text={"Do you want to unlock all Ship Segments?"} />
+                        <OptionRadio optionName={"unlockAllShipDecorations"} check={settingsData.unlockAllShipDecorations} text={"Do you want to unlock all Ship Decorations?"} />
                     </tbody>
                 </table>
                 <input type="submit" value="Submit" />
@@ -101,22 +101,23 @@ function Inventory() {
                     <input type="hidden" name="idFile" id="idFile" value="postTutorialInventory.json" />
                     <table>
                         <tbody>
-                            <tr>
-                                <td>
-                                    Maximum Reputation Per Reset:
-                                </td>
-                                <td>
-                                    <input type='number' name='reputationCaps' id="reputationCaps" defaultValue={postTutorialInventorySettingsData.DailyAffiliation}></input>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Maximum Focus Per Reset:
-                                </td>
-                                <td>
-                                <input type='number' name='focusCaps' id='focusCaps' defaultValue={postTutorialInventorySettingsData.DailyFocus}></input>
-                                </td>
-                            </tr>
+                            <OptionNumber optionName="reputationCaps" optionKey={postTutorialInventorySettingsData.DailyAffiliation} text="Maximum Reputation Per Reset:"/>
+                            <OptionNumber optionName="focusCaps" optionKey={postTutorialInventorySettingsData.DailyFocus} text="Maximum Focus Per Reset:"/>
+                            <OptionNumber optionName="RegularCredits" optionKey={postTutorialInventorySettingsData.RegularCredits} text="Starting Credits:"/>
+                            <OptionNumber optionName="FusionPoints" optionKey={postTutorialInventorySettingsData.FusionPoints} text="Starting Endo:"/>
+                            <OptionNumber optionName="PremiumCredits" optionKey={postTutorialInventorySettingsData.PremiumCredits} text="Starting Platinum:"/>
+                            <OptionNumber optionName="SuitBin" optionKey={postTutorialInventorySettingsData.SuitBin.Slots} text="Warframe Slots:"/>
+                            <OptionNumber optionName="WeaponBin" optionKey={postTutorialInventorySettingsData.WeaponBin.Slots} text="Weapon Slots:"/>
+                            <OptionNumber optionName="SentinelBin" optionKey={postTutorialInventorySettingsData.SentinelBin.Slots} text="Companion Slots:"/>
+                            <OptionNumber optionName="MechBin" optionKey={postTutorialInventorySettingsData.MechBin.Slots} text="Vehicle Slots:"/>
+                            <OptionNumber optionName="SpaceSuitBin" optionKey={postTutorialInventorySettingsData.SpaceSuitBin.Slots} text="Archwing Slots:"/>
+                            <OptionNumber optionName="SpaceWeaponBin" optionKey={postTutorialInventorySettingsData.SpaceWeaponBin.Slots} text="Archweapon Slots:"/>
+                            <OptionNumber optionName="OperatorAmpBin" optionKey={postTutorialInventorySettingsData.OperatorAmpBin.Slots} text="Operator Amp Slots:"/>
+                            <OptionNumber optionName="RandomModBin" optionKey={postTutorialInventorySettingsData.RandomModBin.Slots} text="Max amount of Rivens:"/>
+                            <OptionNumber optionName="CrewMemberBin" optionKey={postTutorialInventorySettingsData.CrewMemberBin.Slots} text="Railjack Crew Member Slots:"/>
+                            <OptionNumber optionName="CrewShipSalvageBin" optionKey={postTutorialInventorySettingsData.CrewShipSalvageBin.Slots} text="Railjack Component Slots:"/>
+                            <OptionNumber optionName="PveBonusLoadoutBin" optionKey={postTutorialInventorySettingsData.PveBonusLoadoutBin.Slots} text="Extra Normal Loadout Slots:"/>
+                            <OptionNumber optionName="PvpBonusLoadoutBin" optionKey={postTutorialInventorySettingsData.PvpBonusLoadoutBin.Slots} text="Extra Conclave Loadout Slots:"/>
                         </tbody>
                     </table>
                     <input type="submit" value="Submit" />
@@ -132,22 +133,23 @@ function Inventory() {
                     <input type="hidden" name="idFile" id="idFile" value="new_inventory.json" />
                     <table>
                         <tbody>
-                            <tr>
-                                <td>
-                                    Maximum Reputation Per Reset:
-                                </td>
-                                <td>
-                                    <input type='number' name='reputationCaps' id="reputationCaps" defaultValue={inventorySettingsData.DailyAffiliation}></input>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Maximum Focus Per Reset:
-                                </td>
-                                <td>
-                                <input type='number' name='focusCaps' id='focusCaps' defaultValue={inventorySettingsData.DailyFocus}></input>
-                                </td>
-                            </tr>
+                            <OptionNumber optionName="reputationCaps" optionKey={inventorySettingsData.DailyAffiliation} text="Maximum Reputation Per Reset:"/>
+                            <OptionNumber optionName="focusCaps" optionKey={inventorySettingsData.DailyFocus} text="Maximum Focus Per Reset:"/>
+                            <OptionNumber optionName="CrewMemberBin" optionKey={inventorySettingsData.CrewMemberBin.Slots} text="Railjack Crew Member Slots:"/>
+                            <OptionNumber optionName="CrewShipSalvageBin" optionKey={inventorySettingsData.CrewShipSalvageBin.Slots} text="Railjack Component Slots:"/>
+                            <OptionNumber optionName="FusionPoints" optionKey={inventorySettingsData.FusionPoints} text="Starting Endo:"/>
+                            <OptionNumber optionName="MechBin" optionKey={inventorySettingsData.MechBin.Slots} text="Vehicle Slots:"/>
+                            <OptionNumber optionName="OperatorAmpBin" optionKey={inventorySettingsData.OperatorAmpBin.Slots} text="Operator Amp Slots:"/>
+                            <OptionNumber optionName="PveBonusLoadoutBin" optionKey={inventorySettingsData.PveBonusLoadoutBin.Slots} text="Normal Loadout Slots:"/>
+                            <OptionNumber optionName="PvpBonusLoadoutBin" optionKey={inventorySettingsData.PvpBonusLoadoutBin.Slots} text="Conclave Loadout Slots:"/>
+                            <OptionNumber optionName="RandomModBin" optionKey={inventorySettingsData.RandomModBin.Slots} text="Max amount of Rivens:"/>
+                            <OptionNumber optionName="RegularCredits" optionKey={inventorySettingsData.RegularCredits} text="Starting Credits:"/>
+                            <OptionNumber optionName="SentinelBin" optionKey={inventorySettingsData.SentinelBin.Slots} text="Companion Slots:"/>
+                            <OptionNumber optionName="SpaceSuitBin" optionKey={inventorySettingsData.SpaceSuitBin.Slots} text="Archwing Slots:"/>
+                            <OptionNumber optionName="SpaceWeaponBin" optionKey={inventorySettingsData.SpaceWeaponBin.Slots} text="Archweapon Slots:"/>
+                            <OptionNumber optionName="SuitBin" optionKey={inventorySettingsData.SuitBin.Slots} text="Warframe Slots:"/>
+                            <OptionNumber optionName="WeaponBin" optionKey={inventorySettingsData.WeaponBin.Slots} text="Weapon Slots:"/>
+                            <OptionNumber optionName="PremiumCredits" optionKey={inventorySettingsData.PremiumCredits} text="Starting Platinum:"/>
                         </tbody>
                     </table>
                     <input type="submit" value="Submit" />
@@ -158,13 +160,24 @@ function Inventory() {
     }
 }
 
-function Option(props) {
+function OptionRadio(props) {
     return (
         <>
             <tr>
                 <td>{props.text}</td>
                 <td><input type="radio" id={props.optionName} name={props.optionName} defaultChecked={props.check} value="true"/> Yes</td>
                 <td><input type="radio" id={props.optionName} name={props.optionName} defaultChecked={!props.check} value="false"/> No</td>
+            </tr>
+        </>
+    )
+}
+
+function OptionNumber(props) {
+    return (
+        <>
+            <tr>
+                <td>{props.text}</td>
+                <td><input className='sendMeCenter' type='number' name={props.optionName} id={props.optionName} defaultValue={props.optionKey}></input></td>
             </tr>
         </>
     )

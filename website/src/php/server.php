@@ -87,6 +87,51 @@
             if ($key=='DailyFocus'){
                 $postTutorialInventoryData[$key]=$_POST['focusCaps'];
             }
+            if ($key=='RegularCredits'){
+                $postTutorialInventoryData[$key]=$_POST['RegularCredits'];
+            }
+            if ($key=='FusionPoints'){
+                $postTutorialInventoryData[$key]=$_POST['FusionPoints'];
+            }
+            if ($key=='PremiumCredits'){
+                $postTutorialInventoryData[$key]=$_POST['PremiumCredits'];
+            }
+            if ($key=='SuitBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['SuitBin'];
+            }
+            if ($key=='WeaponBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['WeaponBin'];
+            }
+            if ($key=='SentinelBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['SentinelBin'];
+            }
+            if ($key=='MechBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['MechBin'];
+            }
+            if ($key=='SpaceSuitBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['SpaceSuitBin'];
+            }
+            if ($key=='SpaceWeaponBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['SpaceWeaponBin'];
+            }
+            if ($key=='OperatorAmpBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['OperatorAmpBin'];
+            }
+            if ($key=='RandomModBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['RandomModBin'];
+            }
+            if ($key=='CrewMemberBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['CrewMemberBin'];
+            }
+            if ($key=='CrewShipSalvageBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['CrewShipSalvageBin'];
+            }
+            if ($key=='PveBonusLoadoutBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['PveBonusLoadoutBin'];
+            }
+            if ($key=='PvpBonusLoadoutBin'){
+                $postTutorialInventoryData[$key]['Slots']=$_POST['PvpBonusLoadoutBin'];
+            }
         }
         $updatedPostTutorialInventoryData = json_encode($postTutorialInventoryData, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
         file_put_contents('../../../static/fixed_responses/postTutorialInventory.json', $updatedPostTutorialInventoryData);
@@ -134,6 +179,51 @@
             }
             if ($key=='DailyFocus'){
                 $inventoryData[$key]=$_POST['focusCaps'];
+            }
+            if ($key=='RegularCredits'){
+                $inventoryData[$key]=$_POST['RegularCredits'];
+            }
+            if ($key=='FusionPoints'){
+                $inventoryData[$key]=$_POST['FusionPoints'];
+            }
+            if ($key=='PremiumCredits'){
+                $inventoryData[$key]=$_POST['PremiumCredits'];
+            }
+            if ($key=='SuitBin'){
+                $inventoryData[$key]['Slots']=$_POST['SuitBin'];
+            }
+            if ($key=='WeaponBin'){
+                $inventoryData[$key]['Slots']=$_POST['WeaponBin'];
+            }
+            if ($key=='SentinelBin'){
+                $inventoryData[$key]['Slots']=$_POST['SentinelBin'];
+            }
+            if ($key=='MechBin'){
+                $inventoryData[$key]['Slots']=$_POST['MechBin'];
+            }
+            if ($key=='SpaceSuitBin'){
+                $inventoryData[$key]['Slots']=$_POST['SpaceSuitBin'];
+            }
+            if ($key=='SpaceWeaponBin'){
+                $inventoryData[$key]['Slots']=$_POST['SpaceWeaponBin'];
+            }
+            if ($key=='OperatorAmpBin'){
+                $inventoryData[$key]['Slots']=$_POST['OperatorAmpBin'];
+            }
+            if ($key=='RandomModBin'){
+                $inventoryData[$key]['Slots']=$_POST['RandomModBin'];
+            }
+            if ($key=='CrewMemberBin'){
+                $inventoryData[$key]['Slots']=$_POST['CrewMemberBin'];
+            }
+            if ($key=='CrewShipSalvageBin'){
+                $inventoryData[$key]['Slots']=$_POST['CrewShipSalvageBin'];
+            }
+            if ($key=='PveBonusLoadoutBin'){
+                $inventoryData[$key]['Slots']=$_POST['PveBonusLoadoutBin'];
+            }
+            if ($key=='PvpBonusLoadoutBin'){
+                $inventoryData[$key]['Slots']=$_POST['PvpBonusLoadoutBin'];
             }
         }
         $updatedInventoryData = json_encode($inventoryData, JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);

@@ -53,3 +53,15 @@ body {
 .settings-form {
     text-align: left;
 }
+
+.sendMeLeft {
+    text-align: left;
+}
+
+.sendMeRight {
+    text-align: right;
+}
+
+.sendMeCenter {
+    text-align: center;
+}
