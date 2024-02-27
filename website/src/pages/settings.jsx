@@ -91,8 +91,9 @@ function Inventory() {
 			},
 		});
 	};
-
-    if (settingsData.skipStoryModeChoice) {
+    
+    if (true==true) { 
+        // if (settingsData.skipTutorial) is the correct version, but until the emulator itself is fixed, gotta disable this check
         return (
             <>
                 <h1>POST TUTORIAL INVENTORY</h1>
