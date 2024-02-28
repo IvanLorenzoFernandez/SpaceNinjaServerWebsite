@@ -96,7 +96,7 @@ function Inventory() {
         // if (settingsData.skipTutorial) is the correct version, but until the emulator itself is fixed, gotta disable this check
         return (
             <>
-                <h1>POST TUTORIAL INVENTORY</h1>
+                <h1>Inventory Options for New Accounts</h1>
                 <form action="http://localhost:8000/server.php" method="post" onSubmit={(event) => handleSubmit(event)} className="settings-form">
                     <input type="hidden" name="idFile" id="idFile" value="postTutorialInventory.json" />
                     <table>
@@ -128,7 +128,7 @@ function Inventory() {
     }else{
         return (
             <>
-                <h1>INVENTORY</h1>
+                <h1>Inventory Options for New Accounts</h1>
                 <form action="http://localhost:8000/server.php" method="post" onSubmit={(event) => handleSubmit(event)} className="settings-form">
                     <input type="hidden" name="idFile" id="idFile" value="new_inventory.json" />
                     <table>
@@ -149,7 +149,6 @@ function Inventory() {
                             <OptionNumber optionName="SpaceWeaponBin" optionKey={inventorySettingsData.SpaceWeaponBin.Slots} text="Archweapon Slots:"/>
                             <OptionNumber optionName="SuitBin" optionKey={inventorySettingsData.SuitBin.Slots} text="Warframe Slots:"/>
                             <OptionNumber optionName="WeaponBin" optionKey={inventorySettingsData.WeaponBin.Slots} text="Weapon Slots:"/>
-                            <OptionNumber optionName="PremiumCredits" optionKey={inventorySettingsData.PremiumCredits} text="Starting Platinum:"/>
                         </tbody>
                     </table>
                     <input type="submit" value="Submit" />
@@ -177,7 +176,7 @@ function OptionNumber(props) {
         <>
             <tr>
                 <td>{props.text}</td>
-                <td><input className='sendMeCenter' type='number' name={props.optionName} id={props.optionName} defaultValue={props.optionKey}></input></td>
+                <td><input type='number' name={props.optionName} id={props.optionName} defaultValue={props.optionKey}></input></td>
             </tr>
         </>
     )
